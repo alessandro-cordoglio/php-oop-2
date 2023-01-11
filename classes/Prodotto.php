@@ -1,16 +1,30 @@
 <?php
 class Prodotto{
-    public $detailProdotto1;
-    public $detailProdotto2;
-    public $detailProdotto3;
-    public $categoria;
+    private $nome;
+    private $immagine;
+    private $prezzo;
+    private $categoria;
 
-    function __construct($detailProdotto1,$detailProdotto2,$detailProdotto3, Categoria $categoria)
+    function __construct(string $nome,string $immagine, float $prezzo,  Categoria $categoria)
     {
-        $this->detailProdotto1 = $detailProdotto1;
-        $this->detailProdotto1 = $detailProdotto1;
-        $this->detailProdotto1 = $detailProdotto1;
+        $this->nome = $nome;
+        $this->immagine = $immagine;
+        $this->prezzo = $prezzo;
         $this->categoria = $categoria;
     }
 
+    function getName(){
+        return $this->nome;
+    }
+    function getImage(){
+        return $this->immagine;
+    }
+    function getPrice(){
+        return $this->prezzo;
+    }
+    function getCategoria(){
+        return $this->categoria;
+    }
+
 }
+

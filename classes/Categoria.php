@@ -1,10 +1,20 @@
 <?php
 class Categoria{
-    public $animale;
+    private $nome;
+    private $icona;
 
-    function __construct($animale)
+    function __construct(string $nome, string $icona)
     {
-        $this->animale = $animale;
+        $this->nome = $nome;
+        $this->icona = $icona;
     }
 
+    function getName()
+    {
+        return $this->nome;
+    }
+    function getIcon()
+    {
+        return $this->icona;
+    }
 }
